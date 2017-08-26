@@ -4,7 +4,6 @@ import { Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Restaurant } from '../models/restaurant';
 
-
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -21,7 +20,14 @@ export class ZomatoService {
     getRestaurant(id: number): Observable<Restaurant> {
         let header = new Headers();
         header.append("user-key", this.apiKey);
-        return this.http.get(this.baseUrl + "/restaurant/" + id, { headers: header })
+        return this.http.get(this.baseUrl + "/restaurant?res_id=" + id, { headers: header })
+            .map(res => res.json());
+    }
+
+    getSearch(searchTerm: string): Observable<Restaurant[]> {
+        let header = new Headers();
+        header.append("user-key", this.apiKey);
+        return this.http.get(this.baseUrl + "/restaurant?res_id=", { headers: header })
             .map(res => res.json());
     }
 
