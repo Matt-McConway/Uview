@@ -35,7 +35,7 @@ export class ZomatoService {
     getSearch(searchTerm: string): Observable<Restaurant[]> {
         let header = new Headers();
         header.append("user-key", this.apiKey);
-        return this.http.get(this.baseUrl + "/restaurant?res_id=", { headers: header })
+        return this.http.get(this.baseUrl + "/search?q=" + searchTerm, { headers: header })
             .map(res => res.json());
     }
 
