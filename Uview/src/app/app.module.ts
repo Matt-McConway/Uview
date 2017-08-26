@@ -11,7 +11,7 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     CommonModule,
-      BrowserModule,
+    BrowserModule,
     HttpModule
   ],
   providers: [ZomatoService],
