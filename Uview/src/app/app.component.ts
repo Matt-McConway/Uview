@@ -13,10 +13,12 @@ export class AppComponent {
 
     restaurant: Restaurant;
     reviews: Review[];
+    searchRes: Restaurant[];
 
     constructor(private zomatoService : ZomatoService) {
         this.getRest();
         this.getReviews();
+        this.getSearch();
     }
 
     title = 'Uview';
@@ -29,7 +31,17 @@ export class AppComponent {
 
     getReviews() {
         this.zomatoService.getReviews(7004429)
-            .subscribe(rest => { this.reviews = rest });
+            .subscribe(rest => {
+                this.reviews = rest;
+            });
+    }
+
+    getSearch() {
+        this.zomatoService.getSearch("als deli")
+            .subscribe(rest => {
+                this.searchRes = rest;
+                console.log(rest);
+            });
     }
 
 }
