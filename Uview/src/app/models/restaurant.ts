@@ -7,7 +7,7 @@
     user_rating: UserRating;
 }
 
-export class Location{
+class Location{
     address:string;
     locality:string;
     city:string;
@@ -15,7 +15,7 @@ export class Location{
     country_id:number;
 }
 
-export class UserRating{
+class UserRating{
     aggregate_rating:number;
     votes:number;
 }

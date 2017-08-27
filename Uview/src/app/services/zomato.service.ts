@@ -14,7 +14,7 @@ export class ZomatoService {
     baseUrl: string;
 
     constructor(private http : Http) {
-        this.apiKey = "caf838732e9f9772993a3dd731d4c0a1";
+        this.apiKey = "fd4a59ad22e1fa80017eebb661662365";
         this.baseUrl = "https://developers.zomato.com/api/v2.1/";
     }
 
@@ -34,7 +34,7 @@ export class ZomatoService {
 
     getSearch(searchTerm: string): Observable<Restaurant[]> {
         let header = new Headers();
-        header.append("user-key", this.apiKey);
+        header.append("user-key", this.apiKey); // Add count for number of result to return or start as well for other stuff
         return this.http.get(this.baseUrl + "/search?q=" + searchTerm, { headers: header })
             .map(res => res.json().restaurants);
     }
