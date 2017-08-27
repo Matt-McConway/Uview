@@ -72,6 +72,44 @@ export class AppComponent {
         }
     }
 
+    Girraffe: Restaurant = {
+        id: 16774318,
+        name: 'Otto Enoteca & Pizzeria',
+        url: 'https://www.zomato.com/new-york-city/otto-enoteca-pizzeria-greenwich-village',
+        location: {
+            address: "15th Avenue, New York, NY 10003",
+            locality: "Greenwich Village",
+            city: "New York City",
+            zipcode: "10003",
+            country_id: 216
+        },
+        featured_image: "https://d.zmtcdn.com/data/pictures/chains/8/16774318/a54deb9e4dbb79dd7c8091b30c642077_featured_v2.png",
+        user_rating: {
+            aggregate_rating: 5,
+            votes: 1050
+        }
+    }
+
+    Nightangle: Restaurant = {
+        id: 16774318,
+        name: 'Otto Enoteca & Pizzeria',
+        url: 'https://www.zomato.com/new-york-city/otto-enoteca-pizzeria-greenwich-village',
+        location: {
+            address: "15th Avenue, New York, NY 10003",
+            locality: "Greenwich Village",
+            city: "New York City",
+            zipcode: "10003",
+            country_id: 216
+        },
+        featured_image: "https://d.zmtcdn.com/data/pictures/chains/8/16774318/a54deb9e4dbb79dd7c8091b30c642077_featured_v2.png",
+        user_rating: {
+            aggregate_rating: 5,
+            votes: 1050
+        }
+    }
+
+    restaurants: Restaurant[] = [this.Hokkaido, this.Girraffe, this.Nightangle];
+
 
 
 }

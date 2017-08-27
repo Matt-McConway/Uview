@@ -31,13 +31,13 @@
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body"><input type="text" placeholder="Search"></div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" *ngFor="let rest of restaurants">
             <div class="thumbnail">
               <a href="/w3images/lights.jpg">
-                    <img src={{"https://www.w3schools.com/w3images/lights.jpg"}} alt="Lights" style="width:100%">
+                    <img src={{rest.featured_image}} alt="Lights" style="width:100%">
                     <div class="caption">
-                      <h1>{{Hokkaido.name}}</h1>
-                      <p>Lorem ipsum...</p>
+                      <h1>{{rest.name}}</h1>
+                      <p>{{rest.location.locality}}</p>
                     </div>
                   </a>
             </div>
