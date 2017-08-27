@@ -4,15 +4,22 @@ import { ZomatoService } from '../app/services/zomato.service';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
+import { RestaurantComponent } from '../app/restaurant_component/restaurant.component';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 @NgModule({
   declarations: [
-    AppComponent
+      AppComponent,
+      RestaurantComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
-    HttpModule
+    HttpModule,
+    BootstrapModalModule
+  ],
+  entryComponents: [
+      RestaurantComponent
   ],
   providers: [ZomatoService],
   bootstrap: [AppComponent]
