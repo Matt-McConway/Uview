@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component  } from '@angular/core';
 import { ZomatoService } from '../app/services/zomato.service';
 import { Observable } from 'rxjs/Observable';
 import { Restaurant } from '../app/models/restaurant';
@@ -14,11 +14,11 @@ export class AppComponent {
     restaurant: Restaurant;
     reviews: Review[];
     searchRes: Restaurant[];
+    searchWord: string;
 
     constructor(private zomatoService : ZomatoService) {
         this.getRest();
         this.getReviews();
-        this.getSearch();
     }
 
     title = 'Uview';
@@ -37,7 +37,7 @@ export class AppComponent {
     }
 
     getSearch() {
-        this.zomatoService.getSearch("als deli")
+        this.zomatoService.getSearch(this.searchWord)
             .subscribe(rest => {
                 this.searchRes = rest;
                 console.log(rest);

@@ -4,6 +4,7 @@ import { ZomatoService } from '../app/services/zomato.service';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     CommonModule,
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ZomatoService],
   bootstrap: [AppComponent]
