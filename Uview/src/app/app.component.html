@@ -11,8 +11,8 @@
     </ul>
     <div class="box pull-right vertical-center">
       <div class="container-3">
-          <span class="icon"><i class="fa fa-search"></i></span>
-          <input type="search" id="search" placeholder="Search..." />
+          <span class="icon" (click)="getSearch()"><i class="fa fa-search"></i></span>
+          <input [(ngModel)]="searchWord" type="search" id="search" placeholder="Search..." />
       </div>
     </div>
   </div>
