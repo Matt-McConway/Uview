@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component  } from '@angular/core';
 import { ZomatoService } from '../app/services/zomato.service';
 import { Observable } from 'rxjs/Observable';
 import { Restaurant } from '../app/models/restaurant';
@@ -14,20 +14,13 @@ export class AppComponent {
     restaurant: Restaurant;
     reviews: Review[];
     searchRes: Restaurant[];
-<<<<<<< HEAD
     searchWord: string;
     restDetails: any;
-=======
->>>>>>> 273db44ff2f9130f208a9128615c0062a02d5c7c
 
     constructor(private zomatoService : ZomatoService) {
         this.getRest();
         this.getReviews();
-<<<<<<< HEAD
         this.getRestaurantInfo();
-=======
-        this.getSearch();
->>>>>>> 273db44ff2f9130f208a9128615c0062a02d5c7c
     }
 
     title = 'Uview';
@@ -46,7 +39,7 @@ export class AppComponent {
     }
 
     getSearch() {
-        this.zomatoService.getSearch("als deli")
+        this.zomatoService.getSearch(this.searchWord)
             .subscribe(rest => {
                 this.searchRes = rest;
                 console.log(rest);
@@ -60,5 +53,25 @@ export class AppComponent {
             console.log(rest);
         });
     }
+
+    Hokkaido: Restaurant = {
+        id: 16774318,
+        name: 'Otto Enoteca & Pizzeria',
+        url: 'https://www.zomato.com/new-york-city/otto-enoteca-pizzeria-greenwich-village',
+        location: {
+            address: "15th Avenue, New York, NY 10003",
+            locality: "Greenwich Village",
+            city: "New York City",
+            zipcode: "10003",
+            country_id: 216
+        },
+        featured_image: "https://d.zmtcdn.com/data/pictures/chains/8/16774318/a54deb9e4dbb79dd7c8091b30c642077_featured_v2.png",
+        user_rating: {
+            aggregate_rating: 5,
+            votes: 1050
+        }
+    }
+
+
 
 }

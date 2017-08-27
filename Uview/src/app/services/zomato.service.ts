@@ -15,11 +15,7 @@ export class ZomatoService {
     url: string;
 
     constructor(private http : Http) {
-<<<<<<< HEAD
-        this.apiKey = "6b794e0fbbd3b6526a2d15c96006376e";
-=======
         this.apiKey = "caf838732e9f9772993a3dd731d4c0a1";
->>>>>>> 273db44ff2f9130f208a9128615c0062a02d5c7c
         this.baseUrl = "https://developers.zomato.com/api/v2.1/";
         this.url = "./restaurants.json";
     }
