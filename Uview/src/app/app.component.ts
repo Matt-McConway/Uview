@@ -15,10 +15,12 @@ export class AppComponent {
     reviews: Review[];
     searchRes: Restaurant[];
     searchWord: string;
+    restDetails: any;
 
     constructor(private zomatoService : ZomatoService) {
         this.getRest();
         this.getReviews();
+        this.getRestaurantInfo();
     }
 
     title = 'Uview';
@@ -42,6 +44,14 @@ export class AppComponent {
                 this.searchRes = rest;
                 console.log(rest);
             });
+    }
+
+    getRestaurantInfo() {
+        this.zomatoService.getDetails().
+        subscribe(rest => {
+            this.restDetails = rest;
+            console.log(rest);
+        });
     }
 
 }

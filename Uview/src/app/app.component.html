@@ -11,24 +11,40 @@
     </ul>
     <div class="box pull-right vertical-center">
       <div class="container-3">
-          <span class="icon" (click)="getSearch()"><i class="fa fa-search"></i></span>
-          <input [(ngModel)]="searchWord" type="search" id="search" placeholder="Search..." />
+        <span class="icon" (click)="getSearch()"><i class="fa fa-search"></i></span>
+        <input [(ngModel)]="searchWord" type="search" id="search" placeholder="Search..." />
       </div>
     </div>
   </div>
-  </nav>
+</nav>
 
 <div>
   <div class="container container-resize">
     <div class="panel-group no-margin">
       <div class="panel panel-default">
         <div class="panel-heading" id="collapse1pic">
-           <h4 class="panel-title panel-resize">
-              <a data-toggle="collapse" href="#collapse1"><h1 class="jumbotron">Food</h1></a>
+          <h4 class="panel-title panel-resize">
+            <a data-toggle="collapse" href="#collapse1">
+              <h1 class="jumbotron">Food</h1>
+            </a>
           </h4>
         </div>
         <div id="collapse1" class="panel-collapse collapse">
-          <div class="panel-body"><input type="text" placeholder="Search"></div>
+          <div class="panel-body col-md-12"><input type="text" placeholder="Search">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  <a href="/w3images/lights.jpg">
+                    <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Lights" style="width:100%">
+                    <div class="caption">
+                      <h1>Lorem ipsum...</h1>
+                      <p>Lorem ipsum...</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -39,7 +55,9 @@
       <div class="panel panel-default">
         <div class="panel-heading" id="collapse2pic">
           <h4 class="panel-title panel-resize">
-              <a data-toggle="collapse" href="#collapse2"><h1 class="jumbotron">Tourist Attractions</h1></a>
+            <a data-toggle="collapse" href="#collapse2">
+              <h1 class="jumbotron">Tourist Attractions</h1>
+            </a>
           </h4>
         </div>
         <div id="collapse2" class="panel-collapse collapse">
@@ -54,7 +72,9 @@
       <div class="panel panel-default">
         <div class="panel-heading" id="collapse3pic">
           <h4 class="panel-title panel-resize">
-              <a data-toggle="collapse" href="#collapse3"><h1 class="jumbotron">Bars</h1></a>
+            <a data-toggle="collapse" href="#collapse3">
+              <h1 class="jumbotron">Bars</h1>
+            </a>
           </h4>
         </div>
         <div id="collapse3" class="panel-collapse collapse">
@@ -69,7 +89,9 @@
       <div class="panel panel-default">
         <div class="panel-heading" id="collapse4pic">
           <h4 class="panel-title panel-resize">
-              <a data-toggle="collapse" href="#collapser"><h1 class="jumbotron">Regional Events</h1></a>
+            <a data-toggle="collapse" href="#collapser">
+              <h1 class="jumbotron">Regional Events</h1>
+            </a>
           </h4>
         </div>
         <div id="collapse4" class="panel-collapse collapse">

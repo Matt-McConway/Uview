@@ -12,10 +12,12 @@ export class ZomatoService {
 
     apiKey: string;
     baseUrl: string;
+    url: string;
 
     constructor(private http : Http) {
-        this.apiKey = "6458ffa4ed70f87338a36185a8a055f6";
+        this.apiKey = "6b794e0fbbd3b6526a2d15c96006376e";
         this.baseUrl = "https://developers.zomato.com/api/v2.1/";
+        this.url = "./restaurants.json";
     }
 
     getRestaurant(id: number): Observable<Restaurant> {
@@ -37,6 +39,10 @@ export class ZomatoService {
         header.append("user-key", this.apiKey);
         return this.http.get(this.baseUrl + "/search?q=" + searchTerm, { headers: header })
             .map(res => res.json().restaurants);
+    }
+
+    getDetails():  Observable<any> {
+        return this.http.get(".\src\restaurants.json").map((res: any) => res.json());
     }
 
 }
