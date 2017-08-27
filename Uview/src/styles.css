@@ -100,6 +100,10 @@
     margin: 0 auto;
 }
 
+.jumbotron {
+    padding: 20px;
+}
+
 .container-resize{
     width: 100%;
     padding: 0;
