@@ -1,7 +1,11 @@
 .box{
-    margin: 25px auto;
     width: 300px;
     height: 50px;
+    margin-right: 5%;
+    top: 0;
+    position: absolute;
+    right: 0;
+    display: block;
   }
 
 .container-3{
@@ -13,7 +17,7 @@
   
   .container-3 input#search{
     width: 300px;
-    height: 50px;
+    height: 45px;
     background: #2b303b;
     border: none;
     font-size: 10pt;
@@ -50,7 +54,7 @@
     z-index: 1;
     color: #4f5b66;
   
-     -webkit-transition: all .55s ease;
+    -webkit-transition: all .55s ease;
     -moz-transition: all .55s ease;
     -ms-transition: all .55s ease;
     -o-transition: all .55s ease;
@@ -71,3 +75,11 @@
   -o-transform:scale(1.5); /* Opera */
    transform:scale(1.5);
   }
+
+#collapse1pic{
+    background-image: url("https://photos-3.dropbox.com/t/2/AABKdsXh3TpoU0go9tPm8VxZMFcK3wyGNy5ZqoR4UJ0hog/12/443044602/png/32x32/3/1503806400/0/2/coffee%20copy.png/ENybuskDGObMAiAHKAc/DzClP5Scl0ahWaoqMkAk6W5IQ4dXnm2mRVN2pdQbQgs?dl=0&size=1600x1200&size_mode=3");
+}
+
+.container{
+    height: 75%;
+}
