@@ -3,6 +3,8 @@ import { ZomatoService } from '../app/services/zomato.service';
 import { Observable } from 'rxjs/Observable';
 import { Restaurant } from '../app/models/restaurant';
 import { Review } from '../app/models/review';
+import { ModalComponent } from './components/modal/modal.component';
+import { DialogService } from 'ng2-bootstrap-modal';
 
 
 @Component({
@@ -18,7 +20,7 @@ export class AppComponent {
     searchWord: string;
     restDetails: any;
 
-    constructor(private zomatoService: ZomatoService) {
+    constructor(private zomatoService: ZomatoService, private dialogService: DialogService) {
         this.getRest();
         this.getReviews();
     }
@@ -44,5 +46,9 @@ export class AppComponent {
                 this.searchRes = rest;
                 console.log(this.searchRes);
             });
+    }
+
+    showAlert() {
+        this.dialogService.addDialog(ModalComponent, { title: 'Alert title!', message: 'Alert Message!!!' });
     }
 }

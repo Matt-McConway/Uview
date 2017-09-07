@@ -7,11 +7,13 @@ import { HttpModule } from '@angular/http';
 import { RestaurantComponent } from '../app/restaurant_component/restaurant.component';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
       AppComponent,
-      RestaurantComponent
+      RestaurantComponent,
+      ModalComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   entryComponents: [
-      RestaurantComponent
+      RestaurantComponent,
+      ModalComponent
   ],
   providers: [ZomatoService],
   bootstrap: [AppComponent]
