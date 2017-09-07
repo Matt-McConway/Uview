@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { RestaurantComponent } from '../app/restaurant_component/restaurant.component';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BootstrapModalModule } from 'ng2-bootstrap-modal';
     CommonModule,
     BrowserModule,
     HttpModule,
-    BootstrapModalModule
+    BootstrapModalModule,
+    FormsModule
   ],
   entryComponents: [
       RestaurantComponent

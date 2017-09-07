@@ -14,35 +14,29 @@ export class ZomatoService {
     baseUrl: string;
     url: string;
 
-    constructor(private http : Http) {
-        this.apiKey = "caf838732e9f9772993a3dd731d4c0a1";
-        this.baseUrl = "https://developers.zomato.com/api/v2.1/";
-        this.url = "./restaurants.json";
+    constructor(private http: Http) {
+        this.apiKey = 'caf838732e9f9772993a3dd731d4c0a1';
+        this.baseUrl = 'https://developers.zomato.com/api/v2.1/';
     }
 
     getRestaurant(id: number): Observable<Restaurant> {
-        let header = new Headers();
-        header.append("user-key", this.apiKey); //Add review count by adding "&count=?" to url
-        return this.http.get(this.baseUrl + "/restaurant?res_id=" + id, { headers: header })
+        const header = new Headers();
+        header.append('user-key', this.apiKey); // Add review count by adding "&count=?" to url
+        return this.http.get(this.baseUrl + '/restaurant?res_id=' + id, { headers: header })
             .map(res => res.json());
     }
 
     getReviews(id: number): Observable<Review[]> {
-        let header = new Headers();
-        header.append("user-key", this.apiKey);
-        return this.http.get(this.baseUrl + "/reviews?res_id=" + id, { headers: header })
+        const header = new Headers();
+        header.append('user-key', this.apiKey);
+        return this.http.get(this.baseUrl + '/reviews?res_id=' + id, { headers: header })
             .map(res => res.json().user_reviews);
     }
 
     getSearch(searchTerm: string): Observable<Restaurant[]> {
-        let header = new Headers();
-        header.append("user-key", this.apiKey);
-        return this.http.get(this.baseUrl + "/search?q=" + searchTerm, { headers: header })
+        const header = new Headers();
+        header.append('user-key', this.apiKey);
+        return this.http.get(this.baseUrl + '/search?q=' + searchTerm, { headers: header })
             .map(res => res.json().restaurants);
     }
-
-    getDetails():  Observable<any> {
-        return this.http.get(".\src\restaurants.json").map((res: any) => res.json());
-    }
-
 }
