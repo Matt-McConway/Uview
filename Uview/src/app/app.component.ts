@@ -49,6 +49,6 @@ export class AppComponent {
     }
 
     showAlert() {
-        this.dialogService.addDialog(ModalComponent, { title: 'Alert title!', message: 'Alert Message!!!' });
+        this.dialogService.addDialog(ModalComponent, { title: this.restDetails, message: 'Alert message!!!' });
     }
 }
